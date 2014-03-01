@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Hupso Share Buttons for Twitter, Facebook & Google+
+Plugin Name: Doap Share Buttons for Twitter, Facebook & Google+
 Plugin URI: http://www.hupso.com/share/
 Description: Add simple social sharing buttons to your articles. Your visitors will be able to easily share your content on the most popular social networks: Twitter, Facebook, Google Plus, Linkedin, Tumblr, Pinterest, StumbleUpon, Digg, Reddit, Bebo, VKontakte and Delicous. These services are used by millions of people every day, so sharing your content there will increase traffic to your website.
 Version: 3.9.24
@@ -205,7 +205,7 @@ function hupso_plugin_activation() {
 }
 
 function hupso_admin_menu() {
-	add_options_page('Hupso Share Buttons Settings', 'Hupso Share Buttons', 'manage_options', __FILE__, 'hupso_admin_settings_show', '', 6);
+	add_options_page('Doap Share Buttons Settings', 'Doap Share Buttons', 'manage_options', __FILE__, 'hupso_admin_settings_show', '', 6);
 }
 
 
@@ -294,7 +294,7 @@ function hupso_admin_settings_show() {
 	
 	
 	echo '<div class="wrap" style="padding-bottom:100px;"><div class="icon32" id="icon-users"></div>';
-	echo '<h2>'. __('Hupso Share Buttons for Twitter, Facebook & Google+ (Settings)', 'hupso').'</h2>';
+	echo '<h2>'. __('Doap Share Buttons for Twitter, Facebook & Google+ (Settings)', 'hupso').'</h2>';
 	echo '<form name="hupso_settings_form" method="post" action="">'; 	
 	
 	echo '<div id="right" style="float:right; width:200px; margin-right:10px; margin-left:20px; margin-top:20px;">';
@@ -308,7 +308,7 @@ function hupso_admin_settings_show() {
 	echo '<p><b>' . __('Shortcodes', 'hupso') . '</b></p>';
 	echo '<p>Use <b>[hupso_hide]</b> anywhere in post\'s text to hide buttons for specific post.</p>';
 	echo '<p>Use <b>[hupso]</b> anywhere in post\'s text to show buttons for specific post at custom position.</p>';
-	echo '<p>Use <b>Hupso Share Buttons Widget</b> to show share buttons in sidebar or footer.</p>';	
+	echo '<p>Use <b>Doap Share Buttons Widget</b> to show share buttons in sidebar or footer.</p>';	
 	echo '<p>Use <b>echo do_shortcode( \'[hupso]\' ); </b> to show share buttons anywhere inside template files.</p>';	
 	echo '<p>Use <b>global $HUPSO_SHOW; $HUPSO_SHOW = false;</b> to hide share buttons inside template files. Make sure you do this before div id="content". This will hide the buttons in content. Share buttons will still show in widget (if used).</p>';		
 	echo '</div>';	
@@ -322,7 +322,7 @@ function hupso_admin_settings_show() {
 	
 	echo '<div id="generic" style="background: #FFDD7F; padding: 10px 10px 10px 10px; margin-top:30px; ">';		
 	echo '<p><b>Generic HTML code</b></p>';	
-	echo '<p>If you need generic HTML code for Hupso Share Buttons to use in HTML documents or inside other CMS, you can <a href="http://www.hupso.com/share/" target="_blank">generate the code here</a>.</p>';
+	echo '<p>If you need generic HTML code for Doap Share Buttons to use in HTML documents or inside other CMS, you can <a href="http://www.hupso.com/share/" target="_blank">generate the code here</a>.</p>';
 	echo '</div>';
 	
 	echo '</div>';
@@ -1338,7 +1338,7 @@ function hupso_the_content_shortcodes( $content ) {
 
 	
 	/* default code */
-	$share_code = '<!-- Hupso Share Buttons - http://www.hupso.com/share/ --><a class="hupso_toolbar" href="http://www.hupso.com/share/"><img src="' . $hupso_p . '//static.hupso.com/share' . $hupso_dev . '/buttons/share-medium.png" style="border:0px; padding-top:5px; float:left;" alt="Share"/></a><script type="text/javascript">var hupso_services_t=new Array("Twitter","Facebook","Google Plus","Linkedin","StumbleUpon","Digg","Reddit","Bebo","Delicious"); var hupso_toolbar_size_t="medium";';
+	$share_code = '<!-- Doap Share Buttons - http://www.hupso.com/share/ --><a class="hupso_toolbar" href="http://www.hupso.com/share/"><img src="' . $hupso_p . '//static.hupso.com/share' . $hupso_dev . '/buttons/share-medium.png" style="border:0px; padding-top:5px; float:left;" alt="Share"/></a><script type="text/javascript">var hupso_services_t=new Array("Twitter","Facebook","Google Plus","Linkedin","StumbleUpon","Digg","Reddit","Bebo","Delicious"); var hupso_toolbar_size_t="medium";';
 	
     $code = get_option( 'hupso_share_buttons_code', $share_code );		
 	if ( $hupso_p == 'https:' ) {
